@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1000" width="900" height="1000">
+  <defs>
+    <radialGradient id="bg" cx="0.5" cy="0.4" r="0.75">
+      <stop offset="0" stop-color="#2a1a08"/>
+      <stop offset="0.55" stop-color="#150d06"/>
+      <stop offset="1" stop-color="#0a0705"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.45" r="0.4">
+      <stop offset="0" stop-color="#ffd98a" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#ffd98a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8a6a2b"/>
+      <stop offset="0.35" stop-color="#e8c87c"/>
+      <stop offset="0.55" stop-color="#f7e3a8"/>
+      <stop offset="0.75" stop-color="#c9a24b"/>
+      <stop offset="1" stop-color="#7a5c24"/>
+    </linearGradient>
+    <linearGradient id="goldV" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e8c87c"/>
+      <stop offset="1" stop-color="#8a6a2b"/>
+    </linearGradient>
+    <radialGradient id="stone" cx="0.38" cy="0.32" r="0.7">
+      <stop offset="0" stop-color="#fff3d4"/>
+      <stop offset="0.6" stop-color="#f2d493"/>
+      <stop offset="1" stop-color="#b8913d"/>
+    </radialGradient>
+  </defs>
+  <rect width="900" height="1000" fill="url(#bg)"/>
+  <rect width="900" height="1000" fill="url(#glow)"/>
+
+  <!-- gold set: necklace + chain -->
+  <path d="M250 360 C 300 620 600 620 650 360" fill="none" stroke="url(#gold)" stroke-width="6" opacity="0.9"/>
+  <g fill="url(#goldV)">
+    <circle cx="262" cy="390" r="7"/><circle cx="282" cy="440" r="6"/><circle cx="312" cy="488" r="6"/>
+    <circle cx="352" cy="528" r="6"/><circle cx="400" cy="552" r="6"/><circle cx="448" cy="528" r="6"/>
+    <circle cx="488" cy="488" r="6"/><circle cx="518" cy="440" r="6"/><circle cx="538" cy="390" r="7"/>
+  </g>
+  <path d="M400 556 L400 640" stroke="url(#gold)" stroke-width="6"/>
+  <path d="M350 640 L450 640 L400 780 Z" fill="none" stroke="url(#gold)" stroke-width="6"/>
+  <path d="M358 640 L442 640 L400 764 Z" fill="url(#goldV)" opacity="0.9"/>
+  <circle cx="400" cy="688" r="34" fill="url(#stone)"/>
+  <circle cx="400" cy="688" r="34" fill="none" stroke="url(#gold)" stroke-width="4"/>
+
+  <!-- bangles bottom -->
+  <ellipse cx="300" cy="900" rx="150" ry="34" fill="none" stroke="url(#gold)" stroke-width="14" opacity="0.7" style="transform: rotate(-8deg); transform-origin: 300px 900px;"/>
+  <ellipse cx="600" cy="912" rx="150" ry="34" fill="none" stroke="url(#gold)" stroke-width="20" opacity="0.35" style="transform: rotate(6deg); transform-origin: 600px 912px;"/>
+
+  <g fill="url(#gold)">
+    <path d="M220 250 l6 12 l12 6 l-12 6 l-6 12 l-6 -12 l-12 -6 l12 -6 Z"/>
+    <path d="M660 560 l5 10 l10 5 l-10 5 l-5 10 l-5 -10 l-10 -5 l10 -5 Z" opacity="0.75"/>
+  </g>
+
+  <text x="450" y="60" text-anchor="middle" font-family="Georgia, serif" font-size="24" letter-spacing="6" fill="#8a6a2b">GOLD JEWELLERY</text>
+  <text x="450" y="980" text-anchor="middle" font-family="Georgia, serif" font-size="15" letter-spacing="3" fill="#5c4520">placeholder — replace with photography</text>
+</svg>

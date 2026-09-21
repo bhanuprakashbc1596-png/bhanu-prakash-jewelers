@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1000" width="900" height="1000">
+  <defs>
+    <radialGradient id="bg" cx="0.5" cy="0.45" r="0.75">
+      <stop offset="0" stop-color="#211508"/>
+      <stop offset="0.55" stop-color="#120c06"/>
+      <stop offset="1" stop-color="#0a0705"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.44" r="0.35">
+      <stop offset="0" stop-color="#ffd98a" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#ffd98a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8a6a2b"/>
+      <stop offset="0.35" stop-color="#e8c87c"/>
+      <stop offset="0.55" stop-color="#f7e3a8"/>
+      <stop offset="0.75" stop-color="#c9a24b"/>
+      <stop offset="1" stop-color="#7a5c24"/>
+    </linearGradient>
+    <linearGradient id="goldV" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e8c87c"/>
+      <stop offset="1" stop-color="#8a6a2b"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="1000" fill="url(#bg)"/>
+  <rect width="900" height="1000" fill="url(#glow)"/>
+
+  <!-- ring being repaired -->
+  <circle cx="450" cy="430" r="190" fill="none" stroke="url(#gold)" stroke-width="26"/>
+  <circle cx="450" cy="430" r="166" fill="none" stroke="url(#goldV)" stroke-width="4" opacity="0.8"/>
+  <circle cx="450" cy="430" r="214" fill="none" stroke="url(#gold)" stroke-width="5" opacity="0.5"/>
+  <circle cx="450" cy="430" r="30" fill="url(#goldV)"/>
+
+  <!-- shine / sparkle on repaired spot -->
+  <g stroke="url(#gold)" stroke-width="4" opacity="0.9">
+    <line x1="560" y1="500" x2="640" y2="580"/>
+    <line x1="640" y1="500" x2="560" y2="580"/>
+    <circle cx="600" cy="540" r="6" fill="url(#gold)"/>
+  </g>
+  <g fill="url(#gold)" opacity="0.9">
+    <path d="M180 300 l7 14 l14 7 l-14 7 l-7 14 l-7 -14 l-14 -7 l14 -7 Z"/>
+    <path d="M720 300 l6 12 l12 6 l-12 6 l-6 12 l-6 -12 l-12 -6 l12 -6 Z" opacity="0.7"/>
+  </g>
+
+  <!-- tools -->
+  <g stroke="url(#gold)" stroke-width="5" fill="none" opacity="0.85">
+    <line x1="250" y1="760" x2="400" y2="760"/>
+    <path d="M250 760 q-16 0 -16 -18 q0 -18 16 -18"/>
+  </g>
+  <g stroke="url(#gold)" stroke-width="4" fill="none" opacity="0.55">
+    <path d="M620 800 l80 -14 m-70 18 l70 -22 m-60 26 l100 -34" />
+  </g>
+
+  <text x="450" y="160" text-anchor="middle" font-family="Georgia, serif" font-size="24" letter-spacing="6" fill="#8a6a2b">REPAIR &amp; SERVICES</text>
+  <text x="450" y="200" text-anchor="middle" font-family="Georgia, serif" font-size="14" letter-spacing="3" fill="#5c4520">careful workmanship — placeholder</text>
+  <text x="450" y="950" text-anchor="middle" font-family="Georgia, serif" font-size="15" letter-spacing="3" fill="#5c4520">placeholder — replace with photography</text>
+</svg>

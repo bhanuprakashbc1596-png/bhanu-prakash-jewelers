@@ -1,0 +1,514 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bhanu Prakash Jewelers — Gold &amp; Silver Jewellery | Mysore</title>
+  <meta name="description" content="Welcome to Bhanu Prakash Jewelers, Mysore. Traditional gold and silver jewellery, crafted with tradition, designed with elegance. D-79, N.H.B, Near Water Tank, KHB Colony, Hootagalli, Mysore-570018." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230a0806'/%3E%3Cpath d='M16 5l7 11-7 11-7-11z' fill='none' stroke='%23c9a24b' stroke-width='2'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- scrubbed cinematic film background -->
+  <div class="cine" id="cine" aria-hidden="true">
+    <video id="cineVideo" playsinline muted preload="auto">
+      <source src="assets/videos/showcase-intra.mp4" type="video/mp4" />
+      <source src="assets/videos/showcase.mp4" type="video/mp4" />
+      <source src="assets/videos/showcase.webm" type="video/webm" />
+    </video>
+    <img id="cineFrame" class="cine-frame" src="assets/frames/f-001.jpg" alt="" aria-hidden="true" />
+    <div class="cine-veil"></div>
+    <div class="cine-vignette"></div>
+    <div class="cine-glow" id="cine-glow"></div>
+    <div class="cine-scan"></div>
+    <div class="cine-grain"></div>
+  </div>
+
+  <!-- cinematic grain overlay -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- scroll progress -->
+  <div class="progress" aria-hidden="true"><span class="progress-fill"></span></div>
+
+  <!-- top navigation -->
+  <header class="site-nav" id="siteNav">
+    <a class="nav-brand" href="#welcome" aria-label="Bhanu Prakash Jewelers home">
+      <svg class="nav-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4l8 12-8 12-8-12z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M16 9l4.5 7-4.5 7-4.5-7z" fill="currentColor" opacity="0.55"/></svg>
+      <span class="nav-brand-name">Bhanu Prakash&nbsp;<em>Jewelers</em></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#jewellery">Our Jewellery</a>
+      <a href="#works">Jewellery Works</a>
+      <a href="#collection">Collection</a>
+      <a href="#craft">Craft</a>
+      <a href="#visit">Visit Us</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <!-- mobile menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav aria-label="Mobile">
+      <a href="#jewellery">Our Jewellery</a>
+      <a href="#works">Jewellery Works</a>
+      <a href="#collection">Collection</a>
+      <a href="#craft">Craft</a>
+      <a href="#gold-silver">Gold &amp; Silver</a>
+      <a href="#visit">Visit Us</a>
+    </nav>
+  </div>
+
+  <main>
+
+    <!-- ============================================================ -->
+    <!-- SCENE 1 · WELCOME / STOREFRONT -->
+    <!-- ============================================================ -->
+    <section class="scene hero" id="welcome">
+      <div class="hero-media">
+        <div class="hero-img" data-hero-zoom>
+          <img src="assets/images/img-01.jpg" alt="Bhanu Prakash Jewelers — shop front, N.H.B colony, Hootagalli, Mysore" />
+        </div>
+        <div class="hero-shade"></div>
+        <div class="hero-warm" data-hero-warm></div>
+      </div>
+      <canvas class="particles" id="particlesHero" aria-hidden="true"></canvas>
+      <div class="hero-copy" data-hero-copy>
+        <p class="kicker kicker-gold">Welcome to</p>
+        <h1 class="hero-title">Bhanu&nbsp;Prakash&nbsp;Jewelers</h1>
+        <p class="hero-tagline">Where Tradition Meets Timeless Beauty</p>
+        <div class="hero-rule"><span></span></div>
+        <p class="hero-sub">Traditional gold &amp; silver jewellery · Mysore</p>
+        <a class="hero-cta" href="#jewellery">
+          <span>Enter the Showroom</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16m0 0l6-6m-6 6l-6-6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+        </a>
+      </div>
+      <div class="scroll-hint" aria-hidden="true">
+        <span class="scroll-hint-line"></span>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SCENE 2/3 · TRANSITION + OUR JEWELLERY SHOWCASE -->
+    <!-- ============================================================ -->
+    <section class="scene pinned-scene showcase-scene" id="jewellery">
+      <div class="pinned">
+        <div class="scene-vignette"></div>
+        <div class="showcase-intro" data-anim="intro">
+          <p class="kicker kicker-gold">Our Jewellery</p>
+          <h2 class="sec-title">A Showroom of Light &amp; Gold</h2>
+          <p class="sec-sub">Crafted with tradition. Designed with elegance. Made to last for generations.</p>
+        </div>
+
+        <div class="showcase-stage">
+          <div class="shot shot-necklace" data-anim="necklace">
+            <div class="shot-glow"></div>
+            <img src="assets/images/img-02.jpg" alt="Traditional gold and silver necklace set" />
+          </div>
+          <div class="shot shot-bangles" data-anim="bangles">
+            <div class="shot-glow"></div>
+            <img src="assets/images/img-03.jpg" alt="Decorative traditional bangles" />
+          </div>
+          <div class="shot shot-bracelet" data-anim="bracelet">
+            <div class="shot-glow"></div>
+            <img src="assets/images/img-04.jpg" alt="Elegant bracelet" />
+          </div>
+        </div>
+
+        <p class="showcase-caption" data-anim="caption">
+          <span class="showcase-caption-rule"></span>
+          Every piece is presented like a jewel in the light —
+          slowly, patiently, and beautifully.
+          <span class="showcase-caption-rule"></span>
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SCENE 4 · JEWELLERY WORKS (CATEGORIES) -->
+    <!-- ============================================================ -->
+    <section class="scene works-scene" id="works">
+      <div class="works-head reveal">
+        <p class="kicker kicker-gold">What we make</p>
+        <h2 class="sec-title">Jewellery Works</h2>
+        <div class="sec-rule"><span></span></div>
+        <p class="sec-sub">We prepare all types of jewellery works with care, craftsmanship and attention to detail.</p>
+      </div>
+
+      <div class="works-grid">
+        <article class="work-card reveal" data-filter="gold">
+          <figure><img src="assets/images/img-06.jpg" alt="Gold jewellery" loading="lazy" /></figure>
+          <h3>Gold Jewellery</h3>
+          <p>Traditional and contemporary gold jewellery.</p>
+          <span class="work-link">View in collection</span>
+        </article>
+
+        <article class="work-card reveal" data-filter="silver">
+          <figure><img src="assets/images/img-05.jpg" alt="Silver jewellery" loading="lazy" /></figure>
+          <h3>Silver Jewellery</h3>
+          <p>Elegant silver pieces and traditional designs.</p>
+          <span class="work-link">View in collection</span>
+        </article>
+
+        <article class="work-card reveal" data-filter="necklaces">
+          <figure><img src="assets/images/img-02.jpg" alt="Necklaces" loading="lazy" /></figure>
+          <h3>Necklaces</h3>
+          <p>Traditional and modern necklace designs.</p>
+          <span class="work-link">View in collection</span>
+        </article>
+
+        <article class="work-card reveal" data-filter="bangles">
+          <figure><img src="assets/images/img-03.jpg" alt="Bangles" loading="lazy" /></figure>
+          <h3>Bangles</h3>
+          <p>Decorative and traditional bangle designs.</p>
+          <span class="work-link">View in collection</span>
+        </article>
+
+        <article class="work-card reveal" data-filter="bracelets">
+          <figure><img src="assets/images/img-04.jpg" alt="Bracelets" loading="lazy" /></figure>
+          <h3>Bracelets</h3>
+          <p>Elegant everyday and occasion wear.</p>
+          <span class="work-link">View in collection</span>
+        </article>
+
+        <article class="work-card reveal" data-filter="earrings">
+          <figure><img src="assets/images/img-07.jpg" alt="Earrings" loading="lazy" /></figure>
+          <h3>Earrings</h3>
+          <p>Traditional and contemporary earrings.</p>
+          <span class="work-link">View in collection</span>
+        </article>
+
+        <article class="work-card reveal" data-filter="custom">
+          <figure><img src="assets/images/img-09.jpg" alt="Custom jewellery design" loading="lazy" /></figure>
+          <h3>Custom Designs</h3>
+          <p>Jewellery designed according to customer requirements.</p>
+          <span class="work-link">View in collection</span>
+        </article>
+
+        <article class="work-card reveal" data-filter="services">
+          <figure><img src="assets/images/img-10.jpg" alt="Repair and jewellery services" loading="lazy" /></figure>
+          <h3>Repair &amp; Jewellery Services</h3>
+          <p>Jewellery repair and related workmanship.</p>
+          <span class="work-link">View in collection</span>
+        </article>
+      </div>
+
+      <p class="works-note">This is a brand showroom experience — visit the shop for pricing, purity and specifications.</p>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SCENE 5 · THE COLLECTION (HORIZONTAL RAIL) -->
+    <!-- ============================================================ -->
+    <section class="scene pinned-scene rail-scene" id="collection">
+      <div class="pinned">
+        <canvas class="particles particles-rail" id="particlesRail" aria-hidden="true"></canvas>
+        <div class="rail-intro" data-parallax="0.07">
+          <p class="kicker kicker-gold">The Collection</p>
+          <h2 class="sec-title">Browse the Craft</h2>
+        </div>
+
+        <div class="rail-filters" role="group" aria-label="Filter collection by category" data-parallax="0.05">
+          <button type="button" class="chip is-active" data-filter="all">All</button>
+          <button type="button" class="chip" data-filter="gold">Gold</button>
+          <button type="button" class="chip" data-filter="silver">Silver</button>
+          <button type="button" class="chip" data-filter="necklaces">Necklaces</button>
+          <button type="button" class="chip" data-filter="bangles">Bangles</button>
+          <button type="button" class="chip" data-filter="bracelets">Bracelets</button>
+          <button type="button" class="chip" data-filter="earrings">Earrings</button>
+          <button type="button" class="chip" data-filter="custom">Custom</button>
+          <button type="button" class="chip" data-filter="services">Services</button>
+        </div>
+
+        <div class="rail-controls" aria-label="Rail controls">
+          <button type="button" class="rail-btn" data-rail-prev aria-label="Previous items">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+          </button>
+          <button type="button" class="rail-btn" data-rail-next aria-label="Next items">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+          </button>
+        </div>
+
+        <div class="rail-wrap" data-parallax="0.04">
+          <div class="rail" id="jewelRail" tabindex="0" role="list" aria-label="Jewellery collection. Use left and right arrow keys to browse.">
+            <article class="rail-card" role="listitem" data-cat="gold">
+              <figure><img src="assets/images/img-06.jpg" alt="Gold jewellery — traditional and contemporary designs" loading="lazy" /></figure>
+              <div class="rail-card-copy">
+                <h3>Gold Jewellery</h3>
+                <p>Traditional and contemporary gold jewellery.</p>
+              </div>
+            </article>
+
+            <article class="rail-card" role="listitem" data-cat="silver">
+              <figure><img src="assets/images/img-05.jpg" alt="Silver jewellery — elegant pieces and traditional designs" loading="lazy" /></figure>
+              <div class="rail-card-copy">
+                <h3>Silver Jewellery</h3>
+                <p>Elegant silver pieces and traditional designs.</p>
+              </div>
+            </article>
+
+            <article class="rail-card" role="listitem" data-cat="necklaces">
+              <figure><img src="assets/images/img-02.jpg" alt="Necklaces — necklace sets" loading="lazy" /></figure>
+              <div class="rail-card-copy">
+                <h3>Necklaces</h3>
+                <p>Traditional and modern necklace designs.</p>
+              </div>
+            </article>
+
+            <article class="rail-card" role="listitem" data-cat="bangles">
+              <figure><img src="assets/images/img-03.jpg" alt="Bangles — decorative and traditional designs" loading="lazy" /></figure>
+              <div class="rail-card-copy">
+                <h3>Bangles</h3>
+                <p>Decorative and traditional bangle designs.</p>
+              </div>
+            </article>
+
+            <article class="rail-card" role="listitem" data-cat="bracelets">
+              <figure><img src="assets/images/img-04.jpg" alt="Bracelets — elegant everyday and occasion wear" loading="lazy" /></figure>
+              <div class="rail-card-copy">
+                <h3>Bracelets</h3>
+                <p>Elegant everyday and occasion wear.</p>
+              </div>
+            </article>
+
+            <article class="rail-card" role="listitem" data-cat="earrings">
+              <figure><img src="assets/images/img-07.jpg" alt="Earrings — traditional and contemporary" loading="lazy" /></figure>
+              <div class="rail-card-copy">
+                <h3>Earrings</h3>
+                <p>Traditional and contemporary earrings.</p>
+              </div>
+            </article>
+
+            <article class="rail-card" role="listitem" data-cat="custom">
+              <figure><img src="assets/images/img-09.jpg" alt="Custom designs — jewellery made to your requirement" loading="lazy" /></figure>
+              <div class="rail-card-copy">
+                <h3>Custom Designs</h3>
+                <p>Designed to match what you carry in your mind.</p>
+              </div>
+            </article>
+
+            <article class="rail-card" role="listitem" data-cat="services">
+              <figure><img src="assets/images/img-10.jpg" alt="Repair and jewellery services" loading="lazy" /></figure>
+              <div class="rail-card-copy">
+                <h3>Repair &amp; Services</h3>
+                <p>Jewellery repair and careful workmanship.</p>
+              </div>
+            </article>
+
+            <article class="rail-card" role="listitem" data-cat="extra">
+              <figure><img src="assets/images/img-11.jpg" alt="Jewellery piece from our collection" loading="lazy" /></figure>
+              <div class="rail-card-copy">
+                <h3>From the Showroom</h3>
+                <p>A piece from our collection.</p>
+              </div>
+            </article>
+
+            <article class="rail-card" role="listitem" data-cat="extra">
+              <figure><img src="assets/images/img-12.jpg" alt="Jewellery piece from our collection" loading="lazy" /></figure>
+              <div class="rail-card-copy">
+                <h3>From the Showroom</h3>
+                <p>A piece from our collection.</p>
+              </div>
+            </article>
+
+            <article class="rail-card" role="listitem" data-cat="extra">
+              <figure><img src="assets/images/img-13.jpg" alt="Jewellery piece from our collection" loading="lazy" /></figure>
+              <div class="rail-card-copy">
+                <h3>From the Showroom</h3>
+                <p>A piece from our collection.</p>
+              </div>
+            </article>
+
+            <article class="rail-card" role="listitem" data-cat="extra">
+              <figure><img src="assets/images/img-14.jpg" alt="Jewellery piece from our collection" loading="lazy" /></figure>
+              <div class="rail-card-copy">
+                <h3>From the Showroom</h3>
+                <p>A piece from our collection.</p>
+              </div>
+            </article>
+
+            <article class="rail-card" role="listitem" data-cat="extra">
+              <figure><img src="assets/images/img-15.jpg" alt="Jewellery piece from our collection" loading="lazy" /></figure>
+              <div class="rail-card-copy">
+                <h3>From the Showroom</h3>
+                <p>A piece from our collection.</p>
+              </div>
+            </article>
+
+            <article class="rail-card" role="listitem" data-cat="extra">
+              <figure><img src="assets/images/img-16.jpg" alt="Jewellery piece from our collection" loading="lazy" /></figure>
+              <div class="rail-card-copy">
+                <h3>From the Showroom</h3>
+                <p>A piece from our collection.</p>
+              </div>
+            </article>
+
+            <article class="rail-card" role="listitem" data-cat="extra">
+              <figure><img src="assets/images/img-17.jpg" alt="Jewellery piece from our collection" loading="lazy" /></figure>
+              <div class="rail-card-copy">
+                <h3>From the Showroom</h3>
+                <p>A piece from our collection.</p>
+              </div>
+            </article>
+
+            <article class="rail-card" role="listitem" data-cat="extra">
+              <figure><img src="assets/images/img-18.jpg" alt="Jewellery piece from our collection" loading="lazy" /></figure>
+              <div class="rail-card-copy">
+                <h3>From the Showroom</h3>
+                <p>A piece from our collection.</p>
+              </div>
+            </article>
+
+            <article class="rail-card" role="listitem" data-cat="extra">
+              <figure><img src="assets/images/img-19.jpg" alt="Jewellery piece from our collection" loading="lazy" /></figure>
+              <div class="rail-card-copy">
+                <h3>From the Showroom</h3>
+                <p>A piece from our collection.</p>
+              </div>
+            </article>
+
+            <article class="rail-card" role="listitem" data-cat="extra">
+              <figure><img src="assets/images/img-20.jpg" alt="Jewellery piece from our collection" loading="lazy" /></figure>
+              <div class="rail-card-copy">
+                <h3>From the Showroom</h3>
+                <p>A piece from our collection.</p>
+              </div>
+            </article>
+
+            <article class="rail-card" role="listitem" data-cat="extra">
+              <figure><img src="assets/images/img-21.jpg" alt="Jewellery piece from our collection" loading="lazy" /></figure>
+              <div class="rail-card-copy">
+                <h3>From the Showroom</h3>
+                <p>A piece from our collection.</p>
+              </div>
+            </article>
+
+            <article class="rail-card" role="listitem" data-cat="extra">
+              <figure><img src="assets/images/img-22.jpg" alt="Jewellery piece from our collection" loading="lazy" /></figure>
+              <div class="rail-card-copy">
+                <h3>From the Showroom</h3>
+                <p>A piece from our collection.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <p class="rail-hint">Drag, swipe, use the arrows, or press ← → to move through the collection.</p>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SCENE 6 · CRAFTED WITH CARE -->
+    <!-- ============================================================ -->
+    <section class="scene pinned-scene craft-scene" id="craft">
+      <div class="pinned">
+        <div class="craft-bg" data-anim="craftBg">
+          <img src="assets/images/img-08.jpg" alt="" aria-hidden="true" />
+          <div class="craft-shade"></div>
+        </div>
+        <div class="craft-copy" data-anim="craftCopy">
+          <p class="kicker kicker-gold">The Maker's Will</p>
+          <h2 class="sec-title">Crafted with Care</h2>
+          <p class="sec-sub">Every piece of jewellery carries the beauty of craftsmanship, tradition and attention to detail.</p>
+          <ul class="craft-pillars">
+            <li><span class="pillar-num">01</span><span><strong>Traditional workmanship</strong> guided by family skill and patience.</span></li>
+            <li><span class="pillar-num">02</span><span><strong>Modern presentation</strong> presented with taste and restraint.</span></li>
+            <li><span class="pillar-num">03</span><span><strong>Customer trust</strong> built piece by piece, year after year.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SCENE 7 · GOLD & SILVER -->
+    <!-- ============================================================ -->
+    <section class="scene pinned-scene metals-scene" id="gold-silver">
+      <div class="pinned">
+        <div class="metals-glow gold-glow" data-anim="goldGlow"></div>
+        <div class="metals-glow silver-glow" data-anim="silverGlow"></div>
+        <div class="metals-copy" data-anim="metalsCopy">
+          <p class="kicker kicker-gold">The two metals</p>
+          <h2 class="sec-title">Gold &amp; Silver — Made with Trust</h2>
+          <p class="sec-sub">From timeless gold designs to elegant silver creations, every piece is presented with care and respect for the traditions of jewellery making.</p>
+        </div>
+        <div class="metals-panels">
+          <figure class="metal metal-gold" data-anim="metalGold">
+            <img src="assets/images/img-06.jpg" alt="Gold jewellery designs" />
+            <figcaption>Gold</figcaption>
+          </figure>
+          <figure class="metal metal-silver" data-anim="metalSilver">
+            <img src="assets/images/img-05.jpg" alt="Silver jewellery designs" />
+            <figcaption>Silver</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SCENE 8 · VISIT US / LOCATION -->
+    <!-- ============================================================ -->
+    <section class="scene pinned-scene visit-scene" id="visit">
+      <div class="pinned">
+        <div class="visit-map-bg" aria-hidden="true">
+          <svg viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice"><g fill="none" stroke="rgba(201,162,75,0.10)" stroke-width="1">
+            <path d="M-100 300 Q300 150 700 320 T1400 300"/><path d="M-100 520 Q400 380 800 540 T1400 520"/>
+            <path d="M300 -100 Q200 300 330 900"/><path d="M760 -100 Q660 300 790 900"/>
+            <path d="M1100 -100 Q1000 300 1130 900"/>
+          </g><g fill="none" stroke="rgba(201,162,75,0.18)" stroke-width="1">
+            <circle cx="600" cy="420" r="120"/><circle cx="600" cy="420" r="240"/><circle cx="600" cy="420" r="360"/>
+          </g><g stroke="rgba(201,162,75,0.35)" stroke-width="2" fill="none">
+            <path d="M600 420 L600 180"/><path d="M600 420 L770 560"/>
+          </g></svg>
+        </div>
+        <div class="visit-wrap">
+          <div class="visit-copy" data-anim="visitCopy">
+            <p class="kicker kicker-gold">Come meet us</p>
+            <h2 class="sec-title">Visit Bhanu Prakash Jewelers</h2>
+            <div class="sec-rule"><span></span></div>
+            <address class="visit-address">
+              <svg class="pin" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-5.6-7-11a7 7 0 1 1 14 0c0 5.4-7 11-7 11z" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="2.6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+              <span>D-79, N.H.B, Near Water Tank,<br />KHB Colony, Hootagalli,<br />Mysore-570018, Karnataka</span>
+            </address>
+            <a class="btn-directions" href="https://www.google.com/maps/search/?api=1&amp;query=Bhanu%20Prakash%20Jewelers%2C%20D-79%2C%20N.H.B%2C%20Near%20Water%20Tank%2C%20KHB%20Colony%2C%20Hootagalli%2C%20Mysore-570018%2C%20Karnataka" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l9 6-9 6V6z" fill="currentColor" opacity="0.6"/><path d="M9 5l10 7-10 7z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+              Get Directions
+            </a>
+            <p class="visit-since">We look forward to welcoming you.</p>
+          </div>
+          <figure class="visit-photo" data-anim="visitPhoto">
+            <img src="assets/images/img-01.jpg" alt="Bhanu Prakash Jewelers shop, Hootagalli, Mysore" />
+            <figcaption>The showroom · Hootagalli, Mysore</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- CLOSING -->
+    <!-- ============================================================ -->
+    <section class="scene closing" id="closing">
+      <div class="closing-inner reveal">
+        <p class="kicker kicker-gold">Bhanu Prakash Jewelers</p>
+        <h2 class="closing-title">Your trust is our tradition.</h2>
+        <p class="closing-line">Thank you for visiting. We remain at the corner of tradition and beauty in the heart of Mysore.</p>
+        <div class="closing-mark" aria-hidden="true">
+          <svg viewBox="0 0 64 64"><path d="M32 8l15 24-15 24L17 32z" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M32 18l9 14-9 14-9-14z" fill="currentColor" opacity="0.5"/></svg>
+        </div>
+        <address>D-79, N.H.B, Near Water Tank, KHB Colony, Hootagalli, Mysore-570018, Karnataka</address>
+      </div>
+      <footer class="site-footer">
+        <p class="copyright">© <span id="year">2026</span> Bhanu Prakash Jewelers, Mysore. All rights reserved.</p>
+        <p class="footer-line">Traditional gold &amp; silver jewellery · Crafted with care</p>
+      </footer>
+    </section>
+
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+  <defs>
+    <radialGradient id="bg" cx="0.5" cy="0.42" r="0.75">
+      <stop offset="0" stop-color="#24170a"/>
+      <stop offset="0.55" stop-color="#130d06"/>
+      <stop offset="1" stop-color="#0a0705"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.4">
+      <stop offset="0" stop-color="#ffd98a" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#ffd98a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8a6a2b"/>
+      <stop offset="0.35" stop-color="#e8c87c"/>
+      <stop offset="0.55" stop-color="#f7e3a8"/>
+      <stop offset="0.75" stop-color="#c9a24b"/>
+      <stop offset="1" stop-color="#7a5c24"/>
+    </linearGradient>
+    <linearGradient id="goldV" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e8c87c"/>
+      <stop offset="1" stop-color="#8a6a2b"/>
+    </linearGradient>
+    <radialGradient id="stone" cx="0.38" cy="0.32" r="0.7">
+      <stop offset="0" stop-color="#fff3d4"/>
+      <stop offset="0.6" stop-color="#f2d493"/>
+      <stop offset="1" stop-color="#b8913d"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#bg)"/>
+  <rect width="800" height="1000" fill="url(#glow)"/>
+
+  <!-- tilted bracelet band -->
+  <g style="transform: rotate(-18deg) translate(0,10px); transform-origin: 400px 480px;">
+    <ellipse cx="400" cy="480" rx="230" ry="300" fill="none" stroke="url(#gold)" stroke-width="22"/>
+    <ellipse cx="400" cy="480" rx="216" ry="288" fill="none" stroke="url(#goldV)" stroke-width="3" opacity="0.75"/>
+    <ellipse cx="400" cy="480" rx="260" ry="312" fill="none" stroke="url(#gold)" stroke-width="4" opacity="0.5"/>
+  </g>
+
+  <!-- clasp -->
+  <rect x="330" y="180" width="140" height="40" rx="20" fill="url(#goldV)" stroke="#5c3f16" stroke-width="2" style="transform: rotate(-18deg) translate(0,10px); transform-origin: 400px 480px;"/>
+  <circle cx="400" cy="200" r="10" fill="#3d2a0d" style="transform: rotate(-18deg) translate(0,10px); transform-origin: 400px 480px;"/>
+
+  <!-- stones around band -->
+  <g fill="url(#stone)">
+    <circle cx="400" cy="156" r="16" style="transform: rotate(-18deg) translate(0,10px); transform-origin: 400px 480px;"/>
+    <circle cx="400" cy="804" r="16" style="transform: rotate(-18deg) translate(0,10px); transform-origin: 400px 480px;"/>
+    <circle cx="164" cy="480" r="16" style="transform: rotate(-18deg) translate(0,10px); transform-origin: 400px 480px;"/>
+    <circle cx="636" cy="480" r="16" style="transform: rotate(-18deg) translate(0,10px); transform-origin: 400px 480px;"/>
+  </g>
+  <g>
+    <circle cx="400" cy="156" r="18" fill="none" stroke="url(#gold)" stroke-width="4" style="transform: rotate(-18deg) translate(0,10px); transform-origin: 400px 480px;"/>
+    <circle cx="400" cy="804" r="18" fill="none" stroke="url(#gold)" stroke-width="4" style="transform: rotate(-18deg) translate(0,10px); transform-origin: 400px 480px;"/>
+    <circle cx="164" cy="480" r="18" fill="none" stroke="url(#gold)" stroke-width="4" style="transform: rotate(-18deg) translate(0,10px); transform-origin: 400px 480px;"/>
+    <circle cx="636" cy="480" r="18" fill="none" stroke="url(#gold)" stroke-width="4" style="transform: rotate(-18deg) translate(0,10px); transform-origin: 400px 480px;"/>
+  </g>
+
+  <g fill="url(#gold)">
+    <path d="M220 250 l6 12 l12 6 l-12 6 l-6 12 l-6 -12 l-12 -6 l12 -6 Z"/>
+    <path d="M600 720 l5 10 l10 5 l-10 5 l-5 10 l-5 -10 l-10 -5 l10 -5 Z" opacity="0.8"/>
+    <path d="M620 260 l4 8 l8 4 l-8 4 l-4 8 l-4 -8 l-8 -4 l8 -4 Z" opacity="0.6"/>
+  </g>
+
+  <text x="400" y="880" text-anchor="middle" font-family="Georgia, serif" font-size="24" letter-spacing="6" fill="#8a6a2b">BRACELET</text>
+  <text x="400" y="915" text-anchor="middle" font-family="Georgia, serif" font-size="15" letter-spacing="3" fill="#5c4520">placeholder — replace with photography</text>
+</svg>

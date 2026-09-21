@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <radialGradient id="bg" cx="0.5" cy="0.42" r="0.8">
+      <stop offset="0" stop-color="#241708"/>
+      <stop offset="0.6" stop-color="#120c06"/>
+      <stop offset="1" stop-color="#0a0705"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.45" r="0.42">
+      <stop offset="0" stop-color="#ffd98a" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#ffd98a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8a6a2b"/>
+      <stop offset="0.35" stop-color="#e8c87c"/>
+      <stop offset="0.55" stop-color="#f7e3a8"/>
+      <stop offset="0.75" stop-color="#c9a24b"/>
+      <stop offset="1" stop-color="#7a5c24"/>
+    </linearGradient>
+  </defs>
+  <rect width="1400" height="900" fill="url(#bg)"/>
+  <rect width="1400" height="900" fill="url(#glow)"/>
+
+  <!-- mandala circles -->
+  <g fill="none" stroke="url(#gold)" opacity="0.35">
+    <circle cx="700" cy="440" r="320" stroke-width="2"/>
+    <circle cx="700" cy="440" r="270" stroke-width="1.5"/>
+    <circle cx="700" cy="440" r="220" stroke-width="1.5" stroke-dasharray="3 9"/>
+    <circle cx="700" cy="440" r="170" stroke-width="2"/>
+  </g>
+  <g stroke="url(#gold)" stroke-width="1.5" opacity="0.3">
+    <line x1="700" y1="120" x2="700" y2="760"/>
+    <line x1="380" y1="440" x2="1020" y2="440"/>
+    <line x1="474" y1="214" x2="926" y2="666"/>
+    <line x1="926" y1="214" x2="474" y2="666"/>
+  </g>
+
+  <!-- lotus / paisley motif center -->
+  <g fill="none" stroke="url(#gold)" stroke-width="3" opacity="0.85">
+    <path d="M700 300 C 620 380 620 480 700 520 C 780 480 780 380 700 300"/>
+    <path d="M700 300 C 660 250 580 250 560 300 C 600 340 640 340 700 300"/>
+    <path d="M700 300 C 740 250 820 250 840 300 C 800 340 760 340 700 300"/>
+    <path d="M700 520 C 660 570 580 570 560 520 C 600 480 640 480 700 520"/>
+    <path d="M700 520 C 740 570 820 570 840 520 C 800 480 760 480 700 520"/>
+  </g>
+  <circle cx="700" cy="410" r="34" fill="url(#gold)"/>
+  <circle cx="700" cy="410" r="18" fill="#120c06"/>
+
+  <!-- sparks flying -->
+  <g fill="url(#gold)">
+    <path d="M560 620 l5 10 l10 5 l-10 5 l-5 10 l-5 -10 l-10 -5 l10 -5 Z"/>
+    <path d="M880 640 l4 9 l9 4 l-9 4 l-4 9 l-4 -9 l-9 -4 l9 -4 Z" opacity="0.85"/>
+    <path d="M820 720 l4 8 l8 4 l-8 4 l-4 8 l-4 -8 l-8 -4 l8 -4 Z" opacity="0.7"/>
+    <path d="M980 560 l4 8 l8 4 l-8 4 l-4 8 l-4 -8 l-8 -4 l8 -4 Z" opacity="0.6"/>
+    <path d="M460 300 l4 8 l8 4 l-8 4 l-4 8 l-4 -8 l-8 -4 l8 -4 Z" opacity="0.6"/>
+  </g>
+  <g fill="url(#gold)" opacity="0.7">
+    <circle cx="520" cy="560" r="2.5"/><circle cx="600" cy="680" r="2"/><circle cx="860" cy="580" r="2.5"/>
+    <circle cx="520" cy="300" r="2"/><circle cx="900" cy="480" r="2"/>
+  </g>
+
+  <!-- crafters mark / tools at base -->
+  <g stroke="url(#gold)" stroke-width="4" fill="none" opacity="0.9">
+    <path d="M640 720 Q700 700 760 720" />
+    <path d="M700 720 L700 640" />
+  </g>
+  <rect x="690" y="628" width="20" height="20" fill="url(#gold)"/>
+
+  <text x="700" y="832" text-anchor="middle" font-family="Georgia, serif" font-size="22" letter-spacing="8" fill="#8a6a2b">CRAFTSMANSHIP — PLACEHOLDER IMAGE</text>
+</svg>
