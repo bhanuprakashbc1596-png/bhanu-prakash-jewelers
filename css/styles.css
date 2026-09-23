@@ -960,6 +960,56 @@ a { color: inherit; text-decoration: none; }
   background: linear-gradient(90deg, var(--maroon), #8a1f31);
 }
 
+.visit-phone {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: clamp(19px, 2vw, 25px);
+  letter-spacing: 0.02em;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+.visit-phone a { color: var(--gold-pale); border-bottom: 1px solid transparent; transition: color 0.3s, border-color 0.3s; }
+.visit-phone a:hover { color: var(--gold-bright); border-color: var(--gold-dim); }
+.visit-phone .phone-icon { flex: 0 0 auto; width: 24px; height: 24px; color: var(--gold); }
+.visit-phone-label {
+  width: 100%;
+  padding-left: 36px;
+  font-size: 14px;
+  font-style: italic;
+  color: var(--text-dim);
+  letter-spacing: 0.04em;
+  margin-top: -14px;
+}
+
+.visit-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.btn-contact, .btn-call {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 32px;
+  border: 1px solid var(--gold);
+  background: linear-gradient(90deg, var(--gold-dim), var(--gold));
+  color: #140c04;
+  font-family: var(--font-sans);
+  font-size: 12.5px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: box-shadow 0.4s, transform 0.4s var(--ease-out), filter 0.4s;
+}
+.btn-contact svg, .btn-call svg { width: 17px; height: 17px; }
+.btn-contact:hover, .btn-call:hover {
+  filter: brightness(1.12);
+  box-shadow: 0 10px 44px rgba(201, 162, 75, 0.35), 0 0 0 1px var(--gold-bright);
+  transform: translateY(-3px);
+}
+
 .visit-since {
   margin-top: 24px;
   color: var(--text-dim);
@@ -984,6 +1034,121 @@ a { color: inherit; text-decoration: none; }
   text-transform: uppercase;
   color: var(--gold);
   text-align: center;
+}
+
+/* ============================================================
+   VISIT / CONTACT MODAL
+   ============================================================ */
+.visit-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(16px, 4vw, 56px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s var(--ease-out), visibility 0s linear 0.4s;
+}
+.visit-modal.open { opacity: 1; visibility: visible; transition: opacity 0.4s var(--ease-out); }
+
+.visit-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(5, 3, 2, 0.84);
+  backdrop-filter: blur(6px);
+}
+
+.visit-modal-box {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1020px;
+  max-height: 92vh;
+  overflow-y: auto;
+  background:
+    radial-gradient(80% 55% at 50% 0%, rgba(110, 22, 36, 0.28), transparent 70%),
+    linear-gradient(180deg, var(--bg-2), #070504);
+  border: 1px solid var(--line);
+  box-shadow: 0 40px 120px rgba(0, 0, 0, 0.65);
+  padding: clamp(28px, 5vw, 56px);
+  transform: translateY(26px) scale(0.98);
+  opacity: 0;
+  transition: transform 0.5s var(--ease-out), opacity 0.4s var(--ease-out);
+}
+.visit-modal.open .visit-modal-box { transform: none; opacity: 1; }
+
+.visit-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background: none;
+  border: 1px solid var(--line);
+  color: var(--gold);
+  cursor: pointer;
+  transition: border-color 0.3s, color 0.3s, transform 0.3s var(--ease-out);
+}
+.visit-modal-close svg { width: 20px; height: 20px; }
+.visit-modal-close:hover { border-color: var(--gold); color: var(--gold-bright); transform: rotate(90deg); }
+
+.visit-modal-head { text-align: center; margin-bottom: clamp(24px, 4vw, 40px); }
+.visit-modal-head .sec-title { font-size: clamp(24px, 3.4vw, 40px); margin-top: 10px; }
+
+.visit-modal-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: clamp(20px, 4vw, 44px);
+  align-items: stretch;
+}
+
+.visit-modal-map { position: relative; min-height: 340px; }
+.visit-modal-map::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border: 1px solid var(--line);
+  box-shadow: inset 0 0 60px rgba(5, 3, 2, 0.55);
+}
+.visit-modal-map iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  filter: grayscale(1) contrast(1.06) brightness(0.9) sepia(0.22);
+  background: var(--bg-3);
+}
+
+.visit-modal-info { display: flex; flex-direction: column; justify-content: center; gap: 20px; }
+.visit-modal-info .visit-address { margin-bottom: 0; font-size: clamp(18px, 1.9vw, 24px); }
+.visit-modal-info .visit-phone { margin-bottom: 0; }
+
+.visit-hours {
+  color: var(--text-dim);
+  font-size: 16px;
+  letter-spacing: 0.05em;
+}
+.visit-hours::before {
+  content: '\25C6';
+  color: var(--gold);
+  margin-right: 10px;
+  font-size: 10px;
+  vertical-align: middle;
+}
+
+.visit-modal-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding-top: 6px;
 }
 
 /* ============================================================
@@ -1044,6 +1209,15 @@ a { color: inherit; text-decoration: none; }
   body { font-size: 17px; }
   .nav-links { display: none; }
   .nav-toggle { display: flex; }
+
+  .visit-modal { padding: 12px; align-items: flex-start; overflow-y: auto; }
+  .visit-modal-box { max-height: none; padding: 24px 18px; }
+  .visit-modal-grid { grid-template-columns: 1fr; }
+  .visit-modal-map { min-height: 300px; }
+  .visit-actions { flex-direction: column; align-items: flex-start; }
+  .visit-actions .btn-directions, .visit-actions .btn-contact { width: 100%; justify-content: center; }
+  .visit-modal-actions { flex-direction: column; align-items: stretch; }
+  .visit-modal-actions .btn-directions, .visit-modal-actions .btn-call { justify-content: center; }
 
   .rail-controls { position: static; margin-top: 10px; justify-content: center; }
   .rail-card { flex-basis: clamp(230px, 74vw, 330px); }

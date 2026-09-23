@@ -555,6 +555,63 @@
   }
 
   /* ============================================================
+     VISIT / CONTACT MODAL — location popup on "Visit Us"
+     ============================================================ */
+  function initVisitModal() {
+    var modal = document.getElementById('visitModal');
+    if (!modal) return;
+
+    var triggers = Array.prototype.slice.call(document.querySelectorAll('[data-visit-pop]'));
+    var closes = Array.prototype.slice.call(modal.querySelectorAll('[data-visit-close]'));
+    var closeBtn = modal.querySelector('.visit-modal-close');
+    var menu = document.getElementById('mobileMenu');
+    var toggle = document.querySelector('.nav-toggle');
+    var lastFocus = null;
+
+    function open() {
+      lastFocus = document.activeElement;
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+
+      if (menu && menu.classList.contains('open')) {
+        menu.classList.remove('open');
+        menu.setAttribute('aria-hidden', 'true');
+        if (toggle) {
+          toggle.setAttribute('aria-expanded', 'false');
+          toggle.classList.remove('is-open');
+        }
+      }
+      if (closeBtn) closeBtn.focus();
+    }
+
+    function close() {
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      if (lastFocus && typeof lastFocus.focus === 'function') lastFocus.focus();
+    }
+
+    triggers.forEach(function (t) {
+      t.addEventListener('click', function (e) {
+        e.preventDefault();
+        open();
+      });
+    });
+
+    closes.forEach(function (c) {
+      c.addEventListener('click', function (e) {
+        if (c.classList.contains('visit-modal-backdrop') && e.target !== c) return;
+        close();
+      });
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && modal.classList.contains('open')) close();
+    });
+  }
+
+  /* ============================================================
      CINE — ultra-smooth scrubbed film background
      3D cursor parallax + cursor-tracking spotlight + scroll scrub
      ============================================================ */
@@ -724,6 +781,7 @@
     initNav();
     initReveal();
     initRail();
+    initVisitModal();
     initCine();
 
 
