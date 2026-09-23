@@ -628,6 +628,7 @@
     var durationRef = 0;
     var engaged = false;     /* media pipeline engaged once for reliable paused seeking */
     var cursorBlend = 0.6;   /* how far cursor X can nudge the timeline (±0.6 * duration) */
+    var seekStep = 1 / 24;   /* quantize scrubs to ~24 fps so the decoder rests when still */
 
     var parX = 0, parY = 0;  /* smoothed tilt amounts (-1..1) */
     var ptrX = 0, ptrY = 0;  /* raw pointer position (-1..1) */
@@ -733,7 +734,13 @@
 
       if (readyRef && durationRef > 0) {
         targetRef = clamp01(scrollP + (cursorP - 0.5) * cursorBlend) * durationRef;
-        currentRef += (targetRef - currentRef) * 0.10;
+
+        /* faster convergence, then snap on arrival so the timeline rests
+           instead of endlessly chasing the target (the old LERP kept
+           writing seeks every frame → constant decoder load → lag) */
+        currentRef += (targetRef - currentRef) * 0.22;
+        if (Math.abs(targetRef - currentRef) < seekStep) currentRef = targetRef;
+        currentRef = clamp(currentRef, 0, durationRef);
 
         if (frameMode && frameImg) {
           var idx = Math.round((currentRef / durationRef) * (FRAMES.length - 1));
@@ -749,12 +756,16 @@
               im.src = FRAMES[nxt];
             }
           }
-        } else if (seekOK && !selfTesting && Math.abs(currentRef - lastApplied) > 0.001) {
-          try {
-            if (typeof video.fastSeek === 'function' && isFinite(currentRef)) video.fastSeek(currentRef);
-            else video.currentTime = currentRef;
-            lastApplied = currentRef;
-          } catch (e) {}
+        } else if (seekOK && !selfTesting) {
+          /* only write a seek when we actually cross the next 24 fps slot */
+          var qt = Math.floor(currentRef / seekStep) * seekStep;
+          if (Math.abs(qt - lastApplied) >= seekStep * 0.5) {
+            try {
+              if (typeof video.fastSeek === 'function' && isFinite(qt)) video.fastSeek(qt);
+              else video.currentTime = qt;
+              lastApplied = qt;
+            } catch (e) {}
+          }
         }
       }
 
